@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{% trans "Onboarding" %}</h1>
+<div class='card mb-3'><div class='card-body'><h5>{% trans "Checklist" %}</h5>
+<ul><li>{% trans "Name" %}: {{ checklist.name|yesno:"✓,✗" }}</li><li>CV: {{ checklist.cv|yesno:"✓,✗" }}</li><li>ID: {{ checklist.id|yesno:"✓,✗" }}</li></ul></div></div>
+<form method='post' enctype='multipart/form-data'>{% csrf_token %}{{ form.as_p }}<button class='btn btn-primary'>{% trans "Save profile" %}</button></form>{% endblock %}

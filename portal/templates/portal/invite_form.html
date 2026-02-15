@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{% trans "Invite Students" %}</h1>
+<form method='post'>{% csrf_token %}{{ form.as_p }}<button class='btn btn-primary'>{% trans "Generate links" %}</button></form>
+{% if links %}<h3 class='mt-4'>{% trans "Invite Links" %}</h3><ul>{% for email, link, created in links %}<li>{{ email }} - <code>{{ link }}</code> <button class='btn btn-sm btn-outline-secondary' onclick='navigator.clipboard.writeText("{{ link }}")'>{% trans "Copy invite link" %}</button></li>{% endfor %}</ul>{% endif %}
+{% endblock %}

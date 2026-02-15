@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{% trans "My Logistics" %}</h1>
+<h3>{% trans "Accommodation" %}</h3>
+{% if booking %}<p>{{ booking.unit.name }} {{ booking.check_in }} - {{ booking.check_out }}</p>{% else %}<p>{% trans "No booking yet" %}</p>{% endif %}
+<h3>{% trans "Transfers" %}</h3><ul>{% for t in transfers %}<li>{{ t.type }} {{ t.datetime }}</li>{% empty %}<li>{% trans "No transfers" %}</li>{% endfor %}</ul>
+<h3>{% trans "Documents" %}</h3><ul>{% for d in documents %}<li><a href='{{ d.file.url }}'>{{ d.doc_type }}</a></li>{% empty %}<li>{% trans "No documents" %}</li>{% endfor %}</ul>{% endblock %}

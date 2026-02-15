@@ -1,0 +1,6 @@
+Django==5.1.6
+psycopg2-binary==2.9.10
+reportlab==4.2.5
+pytest==8.3.4
+pytest-django==4.9.0
+python-dotenv==1.0.1

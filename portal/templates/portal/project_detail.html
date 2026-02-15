@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{{ project.name }}</h1>
+<a class='btn btn-sm btn-outline-primary' href='{% url "invite_students" project.id %}'>{% trans "Invite students" %}</a>
+<a class='btn btn-sm btn-outline-secondary' href='{% url "invite_csv_upload" project.id %}'>{% trans "CSV upload" %}</a>
+<h3 class='mt-3'>{% trans "Students" %}</h3>
+<ul>{% for s in students %}<li>{% if request.user.role == 'ADMIN' %}<a href='{% url "student_detail" s.id %}'>{{ s.first_name }} {{ s.last_name }}</a>{% else %}{{ s.first_name }} {{ s.last_name }}{% endif %} ({{ s.status }})</li>{% empty %}<li>{% trans "No students yet" %}</li>{% endfor %}</ul>
+{% endblock %}

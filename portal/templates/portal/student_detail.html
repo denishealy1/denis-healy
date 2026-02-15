@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{{ profile.first_name }} {{ profile.last_name }}</h1>
+<a class='btn btn-warning' href='{% url "generate_certificate" profile.id %}'>{% trans "Generate Certificate" %}</a>
+<div class='row mt-3'><div class='col-md-4'><h4>{% trans "Placement" %}</h4><form method='post'>{% csrf_token %}{{ pform.as_p }}<button name='save_placement' class='btn btn-primary'>{% trans "Save placement" %}</button></form></div>
+<div class='col-md-4'><h4>{% trans "Booking" %}</h4><form method='post'>{% csrf_token %}{{ bform.as_p }}<button name='save_booking' class='btn btn-primary'>{% trans "Save booking" %}</button></form></div>
+<div class='col-md-4'><h4>{% trans "Transfer" %}</h4><form method='post'>{% csrf_token %}{{ tform.as_p }}<button name='save_transfer' class='btn btn-primary'>{% trans "Add transfer" %}</button></form></div></div>
+{% endblock %}

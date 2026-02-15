@@ -1,0 +1,2 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}<h2>{% trans "Companies" %}</h2><a href="{% url 'company_create' %}" class="btn btn-primary">{% trans "New company" %}</a><table class="table"><tr><th>{% trans "Name" %}</th><th></th></tr>{% for c in companies %}<tr><td>{{ c.name }}</td><td><a href="{% url 'company_edit' c.id %}">{% trans "Edit" %}</a></td></tr>{% empty %}<tr><td>{% trans "No companies" %}</td><td></td></tr>{% endfor %}</table>{% endblock %}

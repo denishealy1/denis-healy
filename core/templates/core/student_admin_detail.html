@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}
+<h2>{{ student.first_name }} {{ student.last_name }}</h2>
+<p>{{ student.user.email }}</p>
+{% if student.documents.all %}<a class="btn btn-outline-primary" href="{{ student.documents.last.file.url }}">{% trans "Latest certificate" %}</a>{% endif %}
+<form method="post">{% csrf_token %}<h4>{% trans "Placement" %}</h4>{{ placement_form.as_p }}<button class="btn btn-primary" name="save_placement">{% trans "Save placement" %}</button></form>
+<form method="post" class="mt-3">{% csrf_token %}<h4>{% trans "Booking" %}</h4>{{ booking_form.as_p }}<button class="btn btn-primary" name="save_booking">{% trans "Save booking" %}</button></form>
+<form method="post" class="mt-3">{% csrf_token %}<h4>{% trans "Transfer" %}</h4>{{ transfer_form.as_p }}<button class="btn btn-primary" name="save_transfer">{% trans "Add transfer" %}</button></form>
+<a class="btn btn-warning mt-3" href="{% url 'generate_certificate' student.id %}">{% trans "Generate Certificate" %}</a>
+{% endblock %}

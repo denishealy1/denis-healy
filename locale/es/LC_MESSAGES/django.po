@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: malaga\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "European Era Mobility Portal"
+msgstr "Portal de Movilidad European Era"
+
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Partner Dashboard"
+msgstr "Panel del Socio"
+
+msgid "Create project"
+msgstr "Crear proyecto"
+
+msgid "Invite students"
+msgstr "Invitar estudiantes"
+
+msgid "Copy invite link"
+msgstr "Copiar enlace de invitación"
+
+msgid "Student Dashboard"
+msgstr "Panel del Estudiante"
+
+msgid "Admin Dashboard"
+msgstr "Panel de Administración"
+
+msgid "Generate Certificate"
+msgstr "Generar certificado"
+
+msgid "Accommodation & Transfers"
+msgstr "Alojamiento y traslados"

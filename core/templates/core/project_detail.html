@@ -1,0 +1,2 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}<h2>{{ project.name }}</h2><h4>{% trans "Students" %}</h4><ul>{% for s in project.students.all %}<li><a href="{% url 'student_admin_detail' s.id %}">{{ s.first_name }} {{ s.last_name }} ({{ s.user.email }}) - {{ s.get_status_display }}</a></li>{% empty %}<li>{% trans "No students" %}</li>{% endfor %}</ul>{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}
+<h2>{% trans "Student Dashboard" %}</h2>
+<p>{% trans "Status" %}: {{ profile.get_status_display }}</p>
+<ul>
+<li>{% trans "Personal info" %}: {% if profile.checklist.personal %}✅{% else %}❌{% endif %}</li>
+<li>{% trans "Documents" %}: {% if profile.checklist.documents %}✅{% else %}❌{% endif %}</li>
+<li>{% trans "Preferences" %}: {% if profile.checklist.preferences %}✅{% else %}❌{% endif %}</li>
+</ul>
+<a href="{% url 'student_profile' %}" class="btn btn-primary">{% trans "Complete profile" %}</a>
+<a href="{% url 'student_logistics' %}" class="btn btn-outline-primary">{% trans "Accommodation & Transfers" %}</a>
+{% endblock %}

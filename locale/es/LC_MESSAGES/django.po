@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mobility\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "European Era Mobility Portal"
+msgstr "Portal de Movilidad European Era"
+
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Sign in"
+msgstr "Entrar"
+
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+msgid "Admin Dashboard"
+msgstr "Panel de Administración"
+
+msgid "Partner Dashboard"
+msgstr "Panel de Socio"
+
+msgid "Create project"
+msgstr "Crear proyecto"
+
+msgid "Invite students"
+msgstr "Invitar estudiantes"
+
+msgid "Copy invite link"
+msgstr "Copiar enlace de invitación"
+
+msgid "Onboarding"
+msgstr "Incorporación"
+
+msgid "Save profile"
+msgstr "Guardar perfil"
+
+msgid "Generate Certificate"
+msgstr "Generar certificado"

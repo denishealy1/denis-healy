@@ -1,0 +1,3 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}<h1>{% trans "CSV Invite Upload" %}</h1>
+<form method='post' enctype='multipart/form-data'>{% csrf_token %}{{ form.as_p }}<button class='btn btn-primary'>{% trans "Upload" %}</button></form>
+{% if report %}<p>{% trans "Created" %}: {{ report.created|length }} | {% trans "Duplicates" %}: {{ report.duplicate|length }}</p>{% endif %}{% endblock %}

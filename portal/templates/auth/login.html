@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% load i18n %}{% block content %}
+<div class='row justify-content-center'><div class='col-md-4'><h1>{% trans "Login" %}</h1>
+<form method='post'>{% csrf_token %}{{ form.as_p }}<button class='btn btn-primary'>{% trans "Sign in" %}</button></form></div></div>
+{% endblock %}

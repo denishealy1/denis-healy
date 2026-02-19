@@ -1,0 +1,6 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}<h2>{% trans "Accommodation & Transfers" %}</h2>
+{% if profile.booking %}<p><strong>{% trans "Accommodation" %}:</strong> {{ profile.booking.unit.name }} ({{ profile.booking.check_in }} - {{ profile.booking.check_out }})</p>{% else %}<p>{% trans "No accommodation assigned" %}</p>{% endif %}
+<h4>{% trans "Transfers" %}</h4><ul>{% for t in profile.transfers.all %}<li>{{ t.get_type_display }} - {{ t.datetime }} - {{ t.flight_number }}</li>{% empty %}<li>{% trans "No transfers assigned" %}</li>{% endfor %}</ul>
+{% if profile.documents.all %}<a href="{{ profile.documents.last.file.url }}">{% trans "Download certificate" %}</a>{% endif %}
+{% endblock %}

@@ -1,0 +1,2 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}<h2>{% trans "Student profile" %}</h2><form method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.as_p }}<button class="btn btn-success">{% trans "Submit" %}</button></form>{% endblock %}

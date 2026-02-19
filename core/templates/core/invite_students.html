@@ -1,0 +1,8 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}
+<h2>{% trans "Invite students" %} - {{ project.name }}</h2>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn btn-primary">{% trans "Generate links" %}</button></form>
+{% if links %}<h4 class="mt-3">{% trans "Invite links" %}</h4>{% for l in links %}<div class="input-group mb-2"><input class="form-control" value="{{ l }}" readonly><button class="btn btn-outline-secondary" onclick="navigator.clipboard.writeText('{{ l }}')">{% trans "Copy invite link" %}</button></div>{% endfor %}{% endif %}
+<hr><h4>{% trans "CSV upload" %}</h4><form method="post" enctype="multipart/form-data">{% csrf_token %}{{ csv_form.as_p }}<button class="btn btn-secondary">{% trans "Upload" %}</button></form>
+{% if report %}<p>{% trans "Created" %}: {{ report.created }} | {% trans "Skipped" %}: {{ report.skipped }}</p>{% endif %}
+{% endblock %}

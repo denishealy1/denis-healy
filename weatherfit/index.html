@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherFit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <h1 id="app-title">WeatherFit</h1>
+
+      <form id="search-form" class="search" novalidate>
+        <label for="city-input">City</label>
+        <div class="search-controls">
+          <input
+            id="city-input"
+            name="city"
+            type="text"
+            placeholder="Enter a city"
+            autocomplete="address-level2"
+            required
+          />
+          <button type="submit" id="search-btn">Search</button>
+        </div>
+      </form>
+
+      <p id="status" class="status" aria-live="polite"></p>
+      <p id="error" class="error" role="alert"></p>
+
+      <section id="results" class="results" aria-live="polite" hidden>
+        <h2 id="result-city"></h2>
+        <dl>
+          <div>
+            <dt>Temperature</dt>
+            <dd id="result-temp"></dd>
+          </div>
+          <div>
+            <dt>Wind speed</dt>
+            <dd id="result-wind"></dd>
+          </div>
+          <div>
+            <dt>Conditions</dt>
+            <dd id="result-desc"></dd>
+          </div>
+        </dl>
+
+        <section class="outfit" aria-labelledby="outfit-title">
+          <h3 id="outfit-title">Outfit suggestion</h3>
+          <p id="outfit-text"></p>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -20,7 +20,7 @@ Django MVP for managing Erasmus mobility end-to-end.
    ```
 3. Start PostgreSQL:
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 4. Run migrations:
    ```bash
@@ -35,6 +35,25 @@ Django MVP for managing Erasmus mobility end-to-end.
    make run
    ```
 
+
+
+## Windows + Docker Desktop (one command)
+Open **PowerShell** in the repo root and run:
+```powershell
+./scripts/setup_windows.ps1
+```
+This script will:
+- create `.venv`
+- install Python dependencies
+- start PostgreSQL (`docker compose up -d`)
+- run migrations
+- seed demo data
+- start Django at `http://localhost:8000/`
+
+If script execution is blocked, run once in PowerShell:
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
 
 ## App links (local)
 After `make run`, open:

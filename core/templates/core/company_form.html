@@ -1,0 +1,2 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}<h2>{% trans "Company" %}</h2><form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn btn-success">{% trans "Save" %}</button></form>{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'core/base.html' %}{% load i18n %}
+{% block content %}
+<h2>{% trans "Accept invite" %}</h2><p>{{ invite.email }}</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn btn-primary">{% trans "Create student account" %}</button></form>
+{% endblock %}
